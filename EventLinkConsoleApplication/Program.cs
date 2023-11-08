@@ -13,7 +13,7 @@ using (HttpClient client = new HttpClient())
         InstagramPosts[] data = JsonConvert.DeserializeObject<InstagramPosts[]>(json);
 
         var optionsBuilder = new DbContextOptionsBuilder<InstagramPostsContext>();
-        optionsBuilder.UseSqlServer("Data Source=eventlinkdb;Initial Catalog=eventlinkdb;User ID=eventlinkadmin;Password=Pa$$w0rd;");
+        optionsBuilder.UseSqlServer("Server=tcp:eventlinkdb.database.windows.net,1433;Initial Catalog=eventlinkdb;Persist Security Info=False;User ID=eventlinkadmin;Password=Pa$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         using (var context = new InstagramPostsContext(optionsBuilder.Options))
         {

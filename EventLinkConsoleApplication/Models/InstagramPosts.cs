@@ -21,65 +21,17 @@ namespace EventLink.Models
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonProperty("type")]
-        public TypeEnum Type { get; set; }
-
-        [JsonProperty("shortCode")]
-        public string ShortCode { get; set; }
-
         [JsonProperty("caption")]
         public string Caption { get; set; }
-
-        [JsonProperty("hashtags")]
-        public string[] Hashtags { get; set; }
-
-        [JsonProperty("mentions")]
-        public string[] Mentions { get; set; }
-
-        [JsonProperty("url")]
-        public Uri Url { get; set; }
-
-        [JsonProperty("commentsCount")]
-        public long CommentsCount { get; set; }
-
-        [JsonProperty("firstComment")]
-        public string FirstComment { get; set; }
-
-        [JsonProperty("latestComments")]
-        public LatestComment[] LatestComments { get; set; }
-
-        [JsonProperty("dimensionsHeight")]
-        public long DimensionsHeight { get; set; }
-
-        [JsonProperty("dimensionsWidth")]
-        public long DimensionsWidth { get; set; }
 
         [JsonProperty("displayUrl")]
         public Uri DisplayUrl { get; set; }
 
-        [JsonProperty("images")]
-        public Uri[] Images { get; set; }
-
         [JsonProperty("videoUrl", NullValueHandling = NullValueHandling.Ignore)]
         public Uri VideoUrl { get; set; }
 
-        [JsonProperty("alt")]
-        public object Alt { get; set; }
-
-        [JsonProperty("likesCount")]
-        public long? LikesCount { get; set; }
-
-        [JsonProperty("videoViewCount", NullValueHandling = NullValueHandling.Ignore)]
-        public long? VideoViewCount { get; set; }
-
-        [JsonProperty("videoPlayCount")]
-        public long? VideoPlayCount { get; set; }
-
         [JsonProperty("timestamp")]
         public DateTimeOffset? Timestamp { get; set; }
-
-        [JsonProperty("childPosts")]
-        public InstagramPosts[] ChildPosts { get; set; }
 
         [JsonProperty("ownerFullName", NullValueHandling = NullValueHandling.Ignore)]
         public string OwnerFullName { get; set; }
@@ -91,70 +43,11 @@ namespace EventLink.Models
         [JsonConverter(typeof(ParseStringConverter))]
         public long? OwnerId { get; set; }
 
-        [JsonProperty("productType", NullValueHandling = NullValueHandling.Ignore)]
-        public string ProductType { get; set; }
-
-        [JsonProperty("videoDuration", NullValueHandling = NullValueHandling.Ignore)]
-        public double? VideoDuration { get; set; }
-
-        [JsonProperty("isSponsored", NullValueHandling = NullValueHandling.Ignore)]
-        public bool? IsSponsored { get; set; }
-
-        [JsonProperty("taggedUsers", NullValueHandling = NullValueHandling.Ignore)]
-        public TaggedUser[] TaggedUsers { get; set; }
-
         [JsonProperty("locationName", NullValueHandling = NullValueHandling.Ignore)]
         public string LocationName { get; set; }
 
-        [JsonProperty("locationId", NullValueHandling = NullValueHandling.Ignore)]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long? LocationId { get; set; }
     }
 
-    public partial class LatestComment
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("text")]
-        public string Text { get; set; }
-
-        [JsonProperty("ownerUsername")]
-        public string OwnerUsername { get; set; }
-
-        [JsonProperty("ownerProfilePicUrl")]
-        public Uri OwnerProfilePicUrl { get; set; }
-
-        [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
-
-        [JsonProperty("likesCount")]
-        public long LikesCount { get; set; }
-
-        [JsonProperty("repliesCount", NullValueHandling = NullValueHandling.Ignore)]
-        public long? RepliesCount { get; set; }
-
-        [JsonProperty("replies", NullValueHandling = NullValueHandling.Ignore)]
-        public LatestComment[] Replies { get; set; }
-    }
-
-    public partial class TaggedUser
-    {
-        [JsonProperty("full_name")]
-        public string FullName { get; set; }
-
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("is_verified")]
-        public bool IsVerified { get; set; }
-
-        [JsonProperty("profile_pic_url")]
-        public Uri ProfilePicUrl { get; set; }
-
-        [JsonProperty("username")]
-        public string Username { get; set; }
-    }
 
     public enum TypeEnum { Image, Sidecar, Video };
 

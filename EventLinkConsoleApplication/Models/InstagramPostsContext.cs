@@ -20,19 +20,17 @@ namespace EventLink.Models
 
             modelBuilder.Entity<InstagramPosts>().Property(e => e.Caption).IsRequired();
 
-            modelBuilder.Entity<InstagramPosts>().Property(e => e.Hashtags).IsRequired();
-
             modelBuilder.Entity<InstagramPosts>().Property(e => e.LocationName).IsRequired();
 
             modelBuilder.Entity<InstagramPosts>().Property(e => e.Timestamp).IsRequired();
-
-            modelBuilder.Entity<InstagramPosts>().Property(e => e.Images).IsRequired();
 
             modelBuilder.Entity<InstagramPosts>().Property(e => e.VideoUrl).IsRequired();
 
             modelBuilder.Entity<InstagramPosts>().Property(e => e.OwnerUsername).IsRequired();
 
             modelBuilder.Entity<InstagramPosts>().Property(e => e.OwnerFullName).IsRequired();
+
+            modelBuilder.Entity<InstagramPosts>().Property(e => e.OwnerId).IsRequired();
 
 
 

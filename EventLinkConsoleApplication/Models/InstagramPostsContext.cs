@@ -14,6 +14,7 @@ namespace EventLink.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<InstagramPosts>().Property(e => e.Id).IsRequired();
 
             modelBuilder.Entity<InstagramPosts>().Property(e => e.DisplayUrl).IsRequired();
 

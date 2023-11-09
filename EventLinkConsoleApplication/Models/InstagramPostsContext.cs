@@ -32,6 +32,8 @@ namespace EventLink.Models
 
             modelBuilder.Entity<InstagramPosts>().Property(e => e.OwnerId).IsRequired();
 
+            modelBuilder.Entity<InstagramPosts>().Property(e => e.Url).IsRequired();
+
 
 
         }

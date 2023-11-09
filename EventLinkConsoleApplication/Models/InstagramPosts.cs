@@ -39,6 +39,9 @@ namespace EventLink.Models
         [JsonProperty("locationName", NullValueHandling = NullValueHandling.Ignore)]
         public string LocationName { get; set; }
 
+        [JsonProperty("url")]
+        public Uri Url { get; set; }
+
     }
 
 

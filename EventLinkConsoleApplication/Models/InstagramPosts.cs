@@ -20,24 +20,11 @@ namespace EventLink.Models
         [JsonProperty("displayUrl")]
         public Uri DisplayUrl { get; set; }
 
-        [JsonProperty("videoUrl", NullValueHandling = NullValueHandling.Ignore)]
-        public Uri VideoUrl { get; set; }
-
-        [JsonProperty("timestamp")]
-        public DateTimeOffset? Timestamp { get; set; }
-
         [JsonProperty("ownerFullName", NullValueHandling = NullValueHandling.Ignore)]
         public string OwnerFullName { get; set; }
 
         [JsonProperty("ownerUsername", NullValueHandling = NullValueHandling.Ignore)]
         public string OwnerUsername { get; set; }
-
-        [JsonProperty("ownerId")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long? OwnerId { get; set; }
-
-        [JsonProperty("locationName", NullValueHandling = NullValueHandling.Ignore)]
-        public string LocationName { get; set; }
 
         [JsonProperty("url")]
         public Uri Url { get; set; }

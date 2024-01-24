@@ -1,4 +1,4 @@
-﻿
+﻿//https://app.quicktype.io/ was used to help generate this code
 namespace EventLink.Models
 {
     using System;

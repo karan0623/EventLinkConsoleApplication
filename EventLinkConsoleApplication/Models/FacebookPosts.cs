@@ -10,16 +10,17 @@ namespace EventLinkConsoleApplication.Models
 {
     using System;
     using System.Collections.Generic;
-
+    using System.ComponentModel.DataAnnotations;
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
     public partial class FacebookPosts
     {
-        [JsonProperty("facebookUrl")]
-        public Uri FacebookUrl { get; set; }
+        //[JsonProperty("facebookUrl")]
+        //public Uri FacebookUrl { get; set; }
 
+        [Key]
         [JsonProperty("postId")]
         public string PostId { get; set; }
 
@@ -29,50 +30,50 @@ namespace EventLinkConsoleApplication.Models
         [JsonProperty("url")]
         public Uri Url { get; set; }
 
-        [JsonProperty("time")]
-        public DateTimeOffset Time { get; set; }
+        //[JsonProperty("time")]
+        //public DateTimeOffset Time { get; set; }
 
-        [JsonProperty("timestamp")]
-        public long Timestamp { get; set; }
+        //[JsonProperty("timestamp")]
+        //public long Timestamp { get; set; }
 
-        [JsonProperty("user")]
-        public User User { get; set; }
+        //[JsonProperty("user")]
+        //public User User { get; set; }
 
         [JsonProperty("text")]
         public string Text { get; set; }
 
-        [JsonProperty("link", NullValueHandling = NullValueHandling.Ignore)]
-        public Uri Link { get; set; }
+        //[JsonProperty("link", NullValueHandling = NullValueHandling.Ignore)]
+        //public Uri Link { get; set; }
 
-        [JsonProperty("likes")]
-        public long Likes { get; set; }
+        //[JsonProperty("likes")]
+        //public long Likes { get; set; }
 
-        [JsonProperty("comments")]
-        public long Comments { get; set; }
+        //[JsonProperty("comments")]
+        //public long Comments { get; set; }
 
-        [JsonProperty("shares")]
-        public long Shares { get; set; }
+        //[JsonProperty("shares")]
+        //public long Shares { get; set; }
 
         //[JsonProperty("media")]
         //public Media[] Media { get; set; }
 
-        [JsonProperty("feedbackId")]
-        public string FeedbackId { get; set; }
+        //[JsonProperty("feedbackId")]
+        //public string FeedbackId { get; set; }
 
-        [JsonProperty("topLevelUrl")]
-        public Uri TopLevelUrl { get; set; }
+        //[JsonProperty("topLevelUrl")]
+        //public Uri TopLevelUrl { get; set; }
 
-        [JsonProperty("facebookId")]
-        public string FacebookId { get; set; }
+        //[JsonProperty("facebookId")]
+        //public string FacebookId { get; set; }
 
-        [JsonProperty("pageAdLibrary")]
-        public PageAdLibrary PageAdLibrary { get; set; }
+        //[JsonProperty("pageAdLibrary")]
+        //public PageAdLibrary PageAdLibrary { get; set; }
 
-        [JsonProperty("isVideo", NullValueHandling = NullValueHandling.Ignore)]
-        public bool? IsVideo { get; set; }
+        //[JsonProperty("isVideo", NullValueHandling = NullValueHandling.Ignore)]
+        //public bool? IsVideo { get; set; }
 
-        [JsonProperty("viewsCount", NullValueHandling = NullValueHandling.Ignore)]
-        public long? ViewsCount { get; set; }
+        //[JsonProperty("viewsCount", NullValueHandling = NullValueHandling.Ignore)]
+        //public long? ViewsCount { get; set; }
     }
 
     //public partial class Media
@@ -423,212 +424,212 @@ namespace EventLinkConsoleApplication.Models
     //    public FlexibleHeightImageClass FlexibleHeightImage { get; set; }
     //}
 
-    public partial class EndCardsChannelInfo
-    {
-        [JsonProperty("video_chaining_caller")]
-        public string VideoChainingCaller { get; set; }
-
-        [JsonProperty("video_channel_entry_point")]
-        public string VideoChannelEntryPoint { get; set; }
-
-        [JsonProperty("video")]
-        public EndCardsChannelInfoVideo Video { get; set; }
-
-        [JsonProperty("__module_operation_useVideoPlayerWatchEndScreenWithActions_video")]
-        public ModuleVideo ModuleOperationUseVideoPlayerWatchEndScreenWithActionsVideo { get; set; }
-
-        [JsonProperty("__module_component_useVideoPlayerWatchEndScreenWithActions_video")]
-        public ModuleVideo ModuleComponentUseVideoPlayerWatchEndScreenWithActionsVideo { get; set; }
-    }
-
-    public partial class ModuleVideo
-    {
-        [JsonProperty("__dr")]
-        public string Dr { get; set; }
-    }
-
-    public partial class EndCardsChannelInfoVideo
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("can_viewer_share")]
-        public bool CanViewerShare { get; set; }
-
-        //[JsonProperty("creation_story")]
-        //public CreationStory CreationStory { get; set; }
-    }
-
-    //public partial class CreationStory
+    //public partial class EndCardsChannelInfo
     //{
-    //    [JsonProperty("shareable")]
-    //    public object Shareable { get; set; }
+    //    [JsonProperty("video_chaining_caller")]
+    //    public string VideoChainingCaller { get; set; }
+
+    //    [JsonProperty("video_channel_entry_point")]
+    //    public string VideoChannelEntryPoint { get; set; }
+
+    //    [JsonProperty("video")]
+    //    public EndCardsChannelInfoVideo Video { get; set; }
+
+    //    [JsonProperty("__module_operation_useVideoPlayerWatchEndScreenWithActions_video")]
+    //    public ModuleVideo ModuleOperationUseVideoPlayerWatchEndScreenWithActionsVideo { get; set; }
+
+    //    [JsonProperty("__module_component_useVideoPlayerWatchEndScreenWithActions_video")]
+    //    public ModuleVideo ModuleComponentUseVideoPlayerWatchEndScreenWithActionsVideo { get; set; }
+    //}
+
+    //public partial class ModuleVideo
+    //{
+    //    [JsonProperty("__dr")]
+    //    public string Dr { get; set; }
+    //}
+
+    //public partial class EndCardsChannelInfoVideo
+    //{
+    //    [JsonProperty("id")]
+    //    public string Id { get; set; }
+
+    //    [JsonProperty("can_viewer_share")]
+    //    public bool CanViewerShare { get; set; }
+
+    //    //[JsonProperty("creation_story")]
+    //    //public CreationStory CreationStory { get; set; }
+    //}
+
+    ////public partial class CreationStory
+    ////{
+    ////    [JsonProperty("shareable")]
+    ////    public object Shareable { get; set; }
+
+    ////    [JsonProperty("id")]
+    ////    public string Id { get; set; }
+    ////}
+
+    //public partial class FlexibleHeightImageClass
+    //{
+    //    [JsonProperty("uri")]
+    //    public Uri Uri { get; set; }
+
+    //    [JsonProperty("height", NullValueHandling = NullValueHandling.Ignore)]
+    //    public long? Height { get; set; }
+
+    //    [JsonProperty("width", NullValueHandling = NullValueHandling.Ignore)]
+    //    public long? Width { get; set; }
+    //}
+
+    //public partial class Info
+    //{
+    //    [JsonProperty("video_chaining_caller")]
+    //    public string VideoChainingCaller { get; set; }
+
+    //    [JsonProperty("video_channel_entry_point")]
+    //    public string VideoChannelEntryPoint { get; set; }
+
+    //    [JsonProperty("video_id")]
+    //    public string VideoId { get; set; }
+
+    //    [JsonProperty("__module_operation_useVideoPlayerWatchPauseScreenWithActions_video")]
+    //    public ModuleVideo ModuleOperationUseVideoPlayerWatchPauseScreenWithActionsVideo { get; set; }
+
+    //    [JsonProperty("__module_component_useVideoPlayerWatchPauseScreenWithActions_video")]
+    //    public ModuleVideo ModuleComponentUseVideoPlayerWatchPauseScreenWithActionsVideo { get; set; }
+    //}
+
+    //public partial class Owner
+    //{
+    //    [JsonProperty("__typename")]
+    //    public string Typename { get; set; }
+
+    //    [JsonProperty("id")]
+    //    public string Id { get; set; }
+
+    //    [JsonProperty("__isVideoOwner", NullValueHandling = NullValueHandling.Ignore)]
+    //    public string IsVideoOwner { get; set; }
+
+    //    [JsonProperty("has_professional_features_for_watch", NullValueHandling = NullValueHandling.Ignore)]
+    //    public bool? HasProfessionalFeaturesForWatch { get; set; }
+    //}
+
+    //public partial class PreferredThumbnail
+    //{
+    //    [JsonProperty("image")]
+    //    public ThumbnailImageClass Image { get; set; }
+
+    //    [JsonProperty("image_preview_payload")]
+    //    public string ImagePreviewPayload { get; set; }
 
     //    [JsonProperty("id")]
     //    public string Id { get; set; }
     //}
 
-    public partial class FlexibleHeightImageClass
-    {
-        [JsonProperty("uri")]
-        public Uri Uri { get; set; }
+    //public partial class ThumbnailImageClass
+    //{
+    //    [JsonProperty("uri")]
+    //    public Uri Uri { get; set; }
+    //}
 
-        [JsonProperty("height", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Height { get; set; }
+    //public partial class VideoPlayerScrubberPreviewRenderer
+    //{
+    //    [JsonProperty("__typename")]
+    //    public string Typename { get; set; }
 
-        [JsonProperty("width", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Width { get; set; }
-    }
+    //    [JsonProperty("video")]
+    //    public VideoPlayerScrubberPreviewRendererVideo Video { get; set; }
 
-    public partial class Info
-    {
-        [JsonProperty("video_chaining_caller")]
-        public string VideoChainingCaller { get; set; }
+    //    [JsonProperty("__module_operation_VideoPlayerScrubberPreview_video")]
+    //    public ModuleVideo ModuleOperationVideoPlayerScrubberPreviewVideo { get; set; }
 
-        [JsonProperty("video_channel_entry_point")]
-        public string VideoChannelEntryPoint { get; set; }
+    //    [JsonProperty("__module_component_VideoPlayerScrubberPreview_video")]
+    //    public ModuleVideo ModuleComponentVideoPlayerScrubberPreviewVideo { get; set; }
+    //}
 
-        [JsonProperty("video_id")]
-        public string VideoId { get; set; }
+    //public partial class VideoPlayerScrubberPreviewRendererVideo
+    //{
+    //    [JsonProperty("scrubber_preview_thumbnail_information")]
+    //    public ScrubberPreviewThumbnailInformation ScrubberPreviewThumbnailInformation { get; set; }
 
-        [JsonProperty("__module_operation_useVideoPlayerWatchPauseScreenWithActions_video")]
-        public ModuleVideo ModuleOperationUseVideoPlayerWatchPauseScreenWithActionsVideo { get; set; }
+    //    [JsonProperty("id")]
+    //    public string Id { get; set; }
+    //}
 
-        [JsonProperty("__module_component_useVideoPlayerWatchPauseScreenWithActions_video")]
-        public ModuleVideo ModuleComponentUseVideoPlayerWatchPauseScreenWithActionsVideo { get; set; }
-    }
+    //public partial class ScrubberPreviewThumbnailInformation
+    //{
+    //    [JsonProperty("sprite_uris")]
+    //    public Uri[] SpriteUris { get; set; }
 
-    public partial class Owner
-    {
-        [JsonProperty("__typename")]
-        public string Typename { get; set; }
+    //    [JsonProperty("thumbnail_width")]
+    //    public long ThumbnailWidth { get; set; }
 
-        [JsonProperty("id")]
-        public string Id { get; set; }
+    //    [JsonProperty("thumbnail_height")]
+    //    public long ThumbnailHeight { get; set; }
 
-        [JsonProperty("__isVideoOwner", NullValueHandling = NullValueHandling.Ignore)]
-        public string IsVideoOwner { get; set; }
+    //    [JsonProperty("has_preview_thumbnails")]
+    //    public bool HasPreviewThumbnails { get; set; }
 
-        [JsonProperty("has_professional_features_for_watch", NullValueHandling = NullValueHandling.Ignore)]
-        public bool? HasProfessionalFeaturesForWatch { get; set; }
-    }
+    //    [JsonProperty("num_images_per_row")]
+    //    public long NumImagesPerRow { get; set; }
 
-    public partial class PreferredThumbnail
-    {
-        [JsonProperty("image")]
-        public ThumbnailImageClass Image { get; set; }
+    //    [JsonProperty("max_number_of_images_per_sprite")]
+    //    public long MaxNumberOfImagesPerSprite { get; set; }
 
-        [JsonProperty("image_preview_payload")]
-        public string ImagePreviewPayload { get; set; }
+    //    [JsonProperty("time_interval_between_image")]
+    //    public long TimeIntervalBetweenImage { get; set; }
+    //}
 
-        [JsonProperty("id")]
-        public string Id { get; set; }
-    }
+    //public partial class VideoPlayerShakaPerformanceLoggerInit
+    //{
+    //    [JsonProperty("__typename")]
+    //    public string Typename { get; set; }
 
-    public partial class ThumbnailImageClass
-    {
-        [JsonProperty("uri")]
-        public Uri Uri { get; set; }
-    }
+    //    [JsonProperty("__module_operation_useVideoPlayerShakaPerformanceLoggerRelayImpl_video")]
+    //    public ModuleVideo ModuleOperationUseVideoPlayerShakaPerformanceLoggerRelayImplVideo { get; set; }
 
-    public partial class VideoPlayerScrubberPreviewRenderer
-    {
-        [JsonProperty("__typename")]
-        public string Typename { get; set; }
+    //    [JsonProperty("__module_component_useVideoPlayerShakaPerformanceLoggerRelayImpl_video")]
+    //    public ModuleVideo ModuleComponentUseVideoPlayerShakaPerformanceLoggerRelayImplVideo { get; set; }
+    //}
 
-        [JsonProperty("video")]
-        public VideoPlayerScrubberPreviewRendererVideo Video { get; set; }
+    //public partial class VideoPlayerShakaPerformanceLoggerInit2
+    //{
+    //    [JsonProperty("__typename")]
+    //    public string Typename { get; set; }
 
-        [JsonProperty("__module_operation_VideoPlayerScrubberPreview_video")]
-        public ModuleVideo ModuleOperationVideoPlayerScrubberPreviewVideo { get; set; }
+    //    [JsonProperty("__module_operation_useVideoPlayerShakaPerformanceLoggerBuilder_video")]
+    //    public ModuleVideo ModuleOperationUseVideoPlayerShakaPerformanceLoggerBuilderVideo { get; set; }
 
-        [JsonProperty("__module_component_VideoPlayerScrubberPreview_video")]
-        public ModuleVideo ModuleComponentVideoPlayerScrubberPreviewVideo { get; set; }
-    }
+    //    [JsonProperty("__module_component_useVideoPlayerShakaPerformanceLoggerBuilder_video")]
+    //    public ModuleVideo ModuleComponentUseVideoPlayerShakaPerformanceLoggerBuilderVideo { get; set; }
 
-    public partial class VideoPlayerScrubberPreviewRendererVideo
-    {
-        [JsonProperty("scrubber_preview_thumbnail_information")]
-        public ScrubberPreviewThumbnailInformation ScrubberPreviewThumbnailInformation { get; set; }
+    //    [JsonProperty("per_session_sampling_rate")]
+    //    public object PerSessionSamplingRate { get; set; }
+    //}
 
-        [JsonProperty("id")]
-        public string Id { get; set; }
-    }
+    //public partial class PageAdLibrary
+    //{
+    //    [JsonProperty("is_business_page_active")]
+    //    public bool IsBusinessPageActive { get; set; }
 
-    public partial class ScrubberPreviewThumbnailInformation
-    {
-        [JsonProperty("sprite_uris")]
-        public Uri[] SpriteUris { get; set; }
+    //    [JsonProperty("id")]
+    //    public string Id { get; set; }
+    //}
 
-        [JsonProperty("thumbnail_width")]
-        public long ThumbnailWidth { get; set; }
+    //public partial class User
+    //{
+    //    [JsonProperty("id")]
+    //    public string Id { get; set; }
 
-        [JsonProperty("thumbnail_height")]
-        public long ThumbnailHeight { get; set; }
+    //    [JsonProperty("name")]
+    //    public string Name { get; set; }
 
-        [JsonProperty("has_preview_thumbnails")]
-        public bool HasPreviewThumbnails { get; set; }
+    //    [JsonProperty("profileUrl")]
+    //    public Uri ProfileUrl { get; set; }
 
-        [JsonProperty("num_images_per_row")]
-        public long NumImagesPerRow { get; set; }
-
-        [JsonProperty("max_number_of_images_per_sprite")]
-        public long MaxNumberOfImagesPerSprite { get; set; }
-
-        [JsonProperty("time_interval_between_image")]
-        public long TimeIntervalBetweenImage { get; set; }
-    }
-
-    public partial class VideoPlayerShakaPerformanceLoggerInit
-    {
-        [JsonProperty("__typename")]
-        public string Typename { get; set; }
-
-        [JsonProperty("__module_operation_useVideoPlayerShakaPerformanceLoggerRelayImpl_video")]
-        public ModuleVideo ModuleOperationUseVideoPlayerShakaPerformanceLoggerRelayImplVideo { get; set; }
-
-        [JsonProperty("__module_component_useVideoPlayerShakaPerformanceLoggerRelayImpl_video")]
-        public ModuleVideo ModuleComponentUseVideoPlayerShakaPerformanceLoggerRelayImplVideo { get; set; }
-    }
-
-    public partial class VideoPlayerShakaPerformanceLoggerInit2
-    {
-        [JsonProperty("__typename")]
-        public string Typename { get; set; }
-
-        [JsonProperty("__module_operation_useVideoPlayerShakaPerformanceLoggerBuilder_video")]
-        public ModuleVideo ModuleOperationUseVideoPlayerShakaPerformanceLoggerBuilderVideo { get; set; }
-
-        [JsonProperty("__module_component_useVideoPlayerShakaPerformanceLoggerBuilder_video")]
-        public ModuleVideo ModuleComponentUseVideoPlayerShakaPerformanceLoggerBuilderVideo { get; set; }
-
-        [JsonProperty("per_session_sampling_rate")]
-        public object PerSessionSamplingRate { get; set; }
-    }
-
-    public partial class PageAdLibrary
-    {
-        [JsonProperty("is_business_page_active")]
-        public bool IsBusinessPageActive { get; set; }
-
-        [JsonProperty("id")]
-        public string Id { get; set; }
-    }
-
-    public partial class User
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("profileUrl")]
-        public Uri ProfileUrl { get; set; }
-
-        [JsonProperty("profilePic")]
-        public Uri ProfilePic { get; set; }
-    }
+    //    [JsonProperty("profilePic")]
+    //    public Uri ProfilePic { get; set; }
+    //}
 
     public enum IsMedia { GenericAttachmentMedia, Photo, ProfilePicAttachmentMedia, Video };
 

@@ -21,7 +21,7 @@ namespace EventLinkConsoleApplication.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<FacebookPosts>().HasNoKey();
+            
             modelBuilder.Entity<FacebookPosts>().Property(e => e.PostId).IsRequired();
 
             modelBuilder.Entity<FacebookPosts>().Property(e => e.PageName).IsRequired();

@@ -3,7 +3,10 @@ using EventLink.Models;
 using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
 using EventLinkConsoleApplication.Models;
+using EventLinkConsoleApp.Models;
 
+
+//This is calling the Instagram API and sending the data to the database
 using (HttpClient client = new HttpClient())
 {
     HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/actor-tasks/exclusive_commode~eventlink---instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
@@ -28,7 +31,7 @@ using (HttpClient client = new HttpClient())
     }
 }
 
-
+//This is calling the Facebook API and sending the data to the database
 using (HttpClient client = new HttpClient())
 {
     HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/rskiYTJ6SBxq1inTV/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
@@ -43,6 +46,31 @@ using (HttpClient client = new HttpClient())
         using (var context = new FacebookPostsContext(optionsBuilder.Options))
         {
             context.FacebookPosts.AddRange(data);
+            await context.SaveChangesAsync();
+        }
+    }
+    else
+    {
+        // Handle the error response
+        throw new HttpRequestException($"API request failed with status code {response.StatusCode}");
+    }
+}
+
+//This is calling the Twitter API and sending the data to the database
+using (HttpClient client = new HttpClient())
+{
+    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/flNhI1cJIZ0HJ2pKI/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
+    if (response.IsSuccessStatusCode)
+    {
+        string json = await response.Content.ReadAsStringAsync();
+        TwitterPosts[] data = JsonConvert.DeserializeObject<TwitterPosts[]>(json);
+
+        var optionsBuilder = new DbContextOptionsBuilder<TwitterPostsContext>();
+        optionsBuilder.UseSqlServer("Server=tcp:eventlinkdb.database.windows.net,1433;Initial Catalog=eventlinkdb;Persist Security Info=False;User ID=eventlinkadmin;Password=Pa$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+
+        using (var context = new TwitterPostsContext(optionsBuilder.Options))
+        {
+            context.TwitterPosts.AddRange(data);
             await context.SaveChangesAsync();
         }
     }

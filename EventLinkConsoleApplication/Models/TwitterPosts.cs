@@ -27,87 +27,87 @@ namespace EventLinkConsoleApp.Models
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonProperty("conversation_id")]
-        public string ConversationId { get; set; }
+        //[JsonProperty("conversation_id")]
+        //public string ConversationId { get; set; }
 
         [JsonProperty("full_text")]
         public string FullText { get; set; }
 
-        [JsonProperty("reply_count")]
-        public long ReplyCount { get; set; }
+        //[JsonProperty("reply_count")]
+        //public long ReplyCount { get; set; }
 
-        [JsonProperty("retweet_count")]
-        public long RetweetCount { get; set; }
+        //[JsonProperty("retweet_count")]
+        //public long RetweetCount { get; set; }
 
-        [JsonProperty("favorite_count")]
-        public long FavoriteCount { get; set; }
+        //[JsonProperty("favorite_count")]
+        //public long FavoriteCount { get; set; }
 
-        [JsonProperty("hashtags")]
-        public string[] Hashtags { get; set; }
+        //[JsonProperty("hashtags")]
+        //public string[] Hashtags { get; set; }
 
-        [JsonProperty("symbols")]
-        public object[] Symbols { get; set; }
+        //[JsonProperty("symbols")]
+        //public object[] Symbols { get; set; }
 
-        [JsonProperty("user_mentions")]
-        public UserMention[] UserMentions { get; set; }
+        //[JsonProperty("user_mentions")]
+        //public UserMention[] UserMentions { get; set; }
 
-        [JsonProperty("urls")]
-        public Url[] Urls { get; set; }
+        //[JsonProperty("urls")]
+        //public Url[] Urls { get; set; }
 
-        [JsonProperty("media")]
-        public Media[] Media { get; set; }
+        //[JsonProperty("media")]
+        //public Media[] Media { get; set; }
 
         [JsonProperty("url")]
         public Uri Url { get; set; }
 
-        [JsonProperty("created_at")]
-        public DateTimeOffset CreatedAt { get; set; }
+        //[JsonProperty("created_at")]
+        //public DateTimeOffset CreatedAt { get; set; }
 
-        [JsonProperty("view_count", NullValueHandling = NullValueHandling.Ignore)]
-        public long? ViewCount { get; set; }
+        //[JsonProperty("view_count", NullValueHandling = NullValueHandling.Ignore)]
+        //public long? ViewCount { get; set; }
 
-        [JsonProperty("quote_count")]
-        public long QuoteCount { get; set; }
+        //[JsonProperty("quote_count")]
+        //public long QuoteCount { get; set; }
 
-        [JsonProperty("is_quote_tweet")]
-        public bool IsQuoteTweet { get; set; }
+        //[JsonProperty("is_quote_tweet")]
+        //public bool IsQuoteTweet { get; set; }
 
-        [JsonProperty("is_retweet")]
-        public bool IsRetweet { get; set; }
+        //[JsonProperty("is_retweet")]
+        //public bool IsRetweet { get; set; }
 
-        [JsonProperty("is_pinned")]
-        public bool IsPinned { get; set; }
+        //[JsonProperty("is_pinned")]
+        //public bool IsPinned { get; set; }
 
-        [JsonProperty("is_truncated")]
-        public bool IsTruncated { get; set; }
+        //[JsonProperty("is_truncated")]
+        //public bool IsTruncated { get; set; }
 
-        [JsonProperty("startUrl")]
-        public Uri StartUrl { get; set; }
+        //[JsonProperty("startUrl")]
+        //public Uri StartUrl { get; set; }
     }
 
-    public partial class Media
-    {
-        [JsonProperty("media_url")]
-        public Uri MediaUrl { get; set; }
+    //public partial class Media
+    //{
+    //    [JsonProperty("media_url")]
+    //    public Uri MediaUrl { get; set; }
 
-        [JsonProperty("type")]
-        public TypeEnum Type { get; set; }
+    //    [JsonProperty("type")]
+    //    public TypeEnum Type { get; set; }
 
-        [JsonProperty("video_url", NullValueHandling = NullValueHandling.Ignore)]
-        public Uri VideoUrl { get; set; }
-    }
+    //    [JsonProperty("video_url", NullValueHandling = NullValueHandling.Ignore)]
+    //    public Uri VideoUrl { get; set; }
+    //}
 
-    public partial class Url
-    {
-        [JsonProperty("url")]
-        public Uri UrlUrl { get; set; }
+    //public partial class Url
+    //{
+    //    [JsonProperty("url")]
+    //    public Uri UrlUrl { get; set; }
 
-        [JsonProperty("expanded_url")]
-        public Uri ExpandedUrl { get; set; }
+    //    [JsonProperty("expanded_url")]
+    //    public Uri ExpandedUrl { get; set; }
 
-        [JsonProperty("display_url")]
-        public string DisplayUrl { get; set; }
-    }
+    //    [JsonProperty("display_url")]
+    //    public string DisplayUrl { get; set; }
+    //}
 
     public partial class User
     {
@@ -188,20 +188,20 @@ namespace EventLinkConsoleApp.Models
         public long IdStr { get; set; }
     }
 
-    public partial class UserMention
-    {
-        [JsonProperty("id_str")]
-        public string IdStr { get; set; }
+    //public partial class UserMention
+    //{
+    //    [JsonProperty("id_str")]
+    //    public string IdStr { get; set; }
 
-        [JsonProperty("name")]
-        public string Name { get; set; }
+    //    [JsonProperty("name")]
+    //    public string Name { get; set; }
 
-        [JsonProperty("screen_name")]
-        public string ScreenName { get; set; }
+    //    [JsonProperty("screen_name")]
+    //    public string ScreenName { get; set; }
 
-        [JsonProperty("profile")]
-        public Uri Profile { get; set; }
-    }
+    //    [JsonProperty("profile")]
+    //    public Uri Profile { get; set; }
+    //}
 
     public enum TypeEnum { Photo, Video };
 

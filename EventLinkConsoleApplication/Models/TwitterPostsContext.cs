@@ -21,7 +21,7 @@ namespace EventLinkConsoleApplication.Models
         {
             modelBuilder.Entity<Instruction>().Property(e => e.Id).IsRequired();
 
-            modelBuilder.Entity<Instruction>().Property(e => e.User).IsRequired();
+            modelBuilder.Entity<User>().Property(e => e.Name).IsRequired();
 
             modelBuilder.Entity<Instruction>().Property(e => e.FullText).IsRequired();
 

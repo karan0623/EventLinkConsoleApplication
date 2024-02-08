@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 using (HttpClient client = new HttpClient())
 {
-    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/actor-tasks/exclusive_commode~eventlink---instagram-post-scraper/run-sync-get-dataset-items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
+    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/VHb5hZhJY4Vgbn1Pl/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
     if (response.IsSuccessStatusCode)
     {
         string json = await response.Content.ReadAsStringAsync();

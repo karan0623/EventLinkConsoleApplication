@@ -111,81 +111,81 @@ namespace EventLinkConsoleApp.Models
 
     public partial class User
     {
-        [JsonProperty("created_at")]
-        public DateTimeOffset CreatedAt { get; set; }
+        //[JsonProperty("created_at")]
+        //public DateTimeOffset CreatedAt { get; set; }
 
-        [JsonProperty("default_profile_image")]
-        public bool DefaultProfileImage { get; set; }
+        //[JsonProperty("default_profile_image")]
+        //public bool DefaultProfileImage { get; set; }
 
-        [JsonProperty("description")]
-        public string Description { get; set; }
+        //[JsonProperty("description")]
+        //public string Description { get; set; }
 
-        [JsonProperty("fast_followers_count")]
-        public long FastFollowersCount { get; set; }
+        //[JsonProperty("fast_followers_count")]
+        //public long FastFollowersCount { get; set; }
 
-        [JsonProperty("favourites_count")]
-        public long FavouritesCount { get; set; }
+        //[JsonProperty("favourites_count")]
+        //public long FavouritesCount { get; set; }
 
-        [JsonProperty("followers_count")]
-        public long FollowersCount { get; set; }
+        //[JsonProperty("followers_count")]
+        //public long FollowersCount { get; set; }
 
-        [JsonProperty("friends_count")]
-        public long FriendsCount { get; set; }
+        //[JsonProperty("friends_count")]
+        //public long FriendsCount { get; set; }
 
-        [JsonProperty("has_custom_timelines")]
-        public bool HasCustomTimelines { get; set; }
+        //[JsonProperty("has_custom_timelines")]
+        //public bool HasCustomTimelines { get; set; }
 
-        [JsonProperty("is_translator")]
-        public bool IsTranslator { get; set; }
+        //[JsonProperty("is_translator")]
+        //public bool IsTranslator { get; set; }
 
-        [JsonProperty("listed_count")]
-        public long ListedCount { get; set; }
+        //[JsonProperty("listed_count")]
+        //public long ListedCount { get; set; }
 
-        [JsonProperty("location")]
-        public string Location { get; set; }
+        //[JsonProperty("location")]
+        //public string Location { get; set; }
 
-        [JsonProperty("media_count")]
-        public long MediaCount { get; set; }
-
+        //[JsonProperty("media_count")]
+        //public long MediaCount { get; set; }
+        [Key]
         [JsonProperty("name")]
         public string Name { get; set; }
 
-        [JsonProperty("normal_followers_count")]
-        public long NormalFollowersCount { get; set; }
+        //[JsonProperty("normal_followers_count")]
+        //public long NormalFollowersCount { get; set; }
 
-        [JsonProperty("possibly_sensitive")]
-        public bool PossiblySensitive { get; set; }
+        //[JsonProperty("possibly_sensitive")]
+        //public bool PossiblySensitive { get; set; }
 
-        [JsonProperty("profile_banner_url")]
-        public Uri ProfileBannerUrl { get; set; }
+        //[JsonProperty("profile_banner_url")]
+        //public Uri ProfileBannerUrl { get; set; }
 
-        [JsonProperty("profile_image_url_https")]
-        public Uri ProfileImageUrlHttps { get; set; }
+        //[JsonProperty("profile_image_url_https")]
+        //public Uri ProfileImageUrlHttps { get; set; }
 
-        [JsonProperty("screen_name")]
-        public string ScreenName { get; set; }
+        //[JsonProperty("screen_name")]
+        //public string ScreenName { get; set; }
 
-        [JsonProperty("statuses_count")]
-        public long StatusesCount { get; set; }
+        //[JsonProperty("statuses_count")]
+        //public long StatusesCount { get; set; }
 
-        [JsonProperty("translator_type")]
-        public TranslatorType TranslatorType { get; set; }
+        //[JsonProperty("translator_type")]
+        //public TranslatorType TranslatorType { get; set; }
 
-        [JsonProperty("url")]
-        public Uri Url { get; set; }
+        //[JsonProperty("url")]
+        //public Uri Url { get; set; }
 
-        [JsonProperty("verified")]
-        public bool Verified { get; set; }
+        //[JsonProperty("verified")]
+        //public bool Verified { get; set; }
 
-        [JsonProperty("verified_type", NullValueHandling = NullValueHandling.Ignore)]
-        public string VerifiedType { get; set; }
+        //[JsonProperty("verified_type", NullValueHandling = NullValueHandling.Ignore)]
+        //public string VerifiedType { get; set; }
 
-        [JsonProperty("withheld_in_countries")]
-        public object[] WithheldInCountries { get; set; }
+        //[JsonProperty("withheld_in_countries")]
+        //public object[] WithheldInCountries { get; set; }
 
-        [JsonProperty("id_str")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long IdStr { get; set; }
+        //[JsonProperty("id_str")]
+        //[JsonConverter(typeof(ParseStringConverter))]
+        //public long IdStr { get; set; }
     }
 
     //public partial class UserMention

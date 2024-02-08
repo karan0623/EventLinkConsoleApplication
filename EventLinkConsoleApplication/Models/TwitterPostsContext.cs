@@ -1,5 +1,6 @@
 ﻿using EventLinkConsoleApp.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +16,13 @@ namespace EventLinkConsoleApplication.Models
 
         }
 
-        public DbSet<TwitterPosts> TwitterPosts { get; set; }
+        public DbSet<Instruction> TwitterPosts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Instruction>().Property(e => e.Id).IsRequired();
 
-            modelBuilder.Entity<User>().Property(e => e.Name).IsRequired();
+            modelBuilder.Entity<Instruction>().Property(e => e.User).HasConversion(v => JsonConvert.SerializeObject(v),v => JsonConvert.DeserializeObject<User>(v));
 
             modelBuilder.Entity<Instruction>().Property(e => e.FullText).IsRequired();
 

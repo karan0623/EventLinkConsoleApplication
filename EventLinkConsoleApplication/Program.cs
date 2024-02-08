@@ -63,7 +63,7 @@ using (HttpClient client = new HttpClient())
     if (response.IsSuccessStatusCode)
     {
         string json = await response.Content.ReadAsStringAsync();
-        TwitterPosts[] data = JsonConvert.DeserializeObject<TwitterPosts[]>(json);
+        Instruction[] data = JsonConvert.DeserializeObject<Instruction[]>(json);
 
         var optionsBuilder = new DbContextOptionsBuilder<TwitterPostsContext>();
         optionsBuilder.UseSqlServer("Server=tcp:eventlinkdb.database.windows.net,1433;Initial Catalog=eventlinkdb;Persist Security Info=False;User ID=eventlinkadmin;Password=Pa$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");

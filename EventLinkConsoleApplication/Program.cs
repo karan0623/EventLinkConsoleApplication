@@ -34,7 +34,7 @@ using (HttpClient client = new HttpClient())
 //This is calling the Facebook API and sending the data to the database
 using (HttpClient client = new HttpClient())
 {
-    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/rskiYTJ6SBxq1inTV/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
+    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/F5H41ckOPgMkNoynt/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
     if (response.IsSuccessStatusCode)
     {
         string json = await response.Content.ReadAsStringAsync();

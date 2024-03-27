@@ -9,7 +9,7 @@ using EventLinkConsoleApp.Models;
 //This is calling the Instagram API and sending the data to the database
 using (HttpClient client = new HttpClient())
 {
-    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/VHb5hZhJY4Vgbn1Pl/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
+    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/RhnjPNj8FcOVvk7QY/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
     if (response.IsSuccessStatusCode)
     {
         string json = await response.Content.ReadAsStringAsync();
@@ -34,7 +34,7 @@ using (HttpClient client = new HttpClient())
 //This is calling the Facebook API and sending the data to the database
 using (HttpClient client = new HttpClient())
 {
-    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/F5H41ckOPgMkNoynt/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
+    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/HxVl6BvdV5uUkBYis/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
     if (response.IsSuccessStatusCode)
     {
         string json = await response.Content.ReadAsStringAsync();
@@ -59,7 +59,7 @@ using (HttpClient client = new HttpClient())
 //This is calling the Twitter API and sending the data to the database
 using (HttpClient client = new HttpClient())
 {
-    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/flNhI1cJIZ0HJ2pKI/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
+    HttpResponseMessage response = await client.GetAsync("https://api.apify.com/v2/datasets/Bexe0nmPzFKWeZZ4q/items?token=apify_api_Uea6k2FqNtwergHaVTQ5YiVQm2Q4d80BNqpH");
     if (response.IsSuccessStatusCode)
     {
         string json = await response.Content.ReadAsStringAsync();

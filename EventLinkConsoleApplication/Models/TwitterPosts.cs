@@ -27,181 +27,22 @@ namespace EventLinkConsoleApp.Models
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        //[JsonProperty("conversation_id")]
-        //public string ConversationId { get; set; }
-
         [JsonProperty("full_text")]
         public string FullText { get; set; }
-
-        //[JsonProperty("reply_count")]
-        //public long ReplyCount { get; set; }
-
-        //[JsonProperty("retweet_count")]
-        //public long RetweetCount { get; set; }
-
-        //[JsonProperty("favorite_count")]
-        //public long FavoriteCount { get; set; }
-
-        //[JsonProperty("hashtags")]
-        //public string[] Hashtags { get; set; }
-
-        //[JsonProperty("symbols")]
-        //public object[] Symbols { get; set; }
-
-        //[JsonProperty("user_mentions")]
-        //public UserMention[] UserMentions { get; set; }
-
-        //[JsonProperty("urls")]
-        //public Url[] Urls { get; set; }
-
-        //[JsonProperty("media")]
-        //public Media[] Media { get; set; }
 
         [JsonProperty("url")]
         public Uri Url { get; set; }
 
-        //[JsonProperty("created_at")]
-        //public DateTimeOffset CreatedAt { get; set; }
-
-        //[JsonProperty("view_count", NullValueHandling = NullValueHandling.Ignore)]
-        //public long? ViewCount { get; set; }
-
-        //[JsonProperty("quote_count")]
-        //public long QuoteCount { get; set; }
-
-        //[JsonProperty("is_quote_tweet")]
-        //public bool IsQuoteTweet { get; set; }
-
-        //[JsonProperty("is_retweet")]
-        //public bool IsRetweet { get; set; }
-
-        //[JsonProperty("is_pinned")]
-        //public bool IsPinned { get; set; }
-
-        //[JsonProperty("is_truncated")]
-        //public bool IsTruncated { get; set; }
-
-        //[JsonProperty("startUrl")]
-        //public Uri StartUrl { get; set; }
     }
-
-    //public partial class Media
-    //{
-    //    [JsonProperty("media_url")]
-    //    public Uri MediaUrl { get; set; }
-
-    //    [JsonProperty("type")]
-    //    public TypeEnum Type { get; set; }
-
-    //    [JsonProperty("video_url", NullValueHandling = NullValueHandling.Ignore)]
-    //    public Uri VideoUrl { get; set; }
-    //}
-
-    //public partial class Url
-    //{
-    //    [JsonProperty("url")]
-    //    public Uri UrlUrl { get; set; }
-
-    //    [JsonProperty("expanded_url")]
-    //    public Uri ExpandedUrl { get; set; }
-
-    //    [JsonProperty("display_url")]
-    //    public string DisplayUrl { get; set; }
-    //}
 
     public partial class User
     {
-        //[JsonProperty("created_at")]
-        //public DateTimeOffset CreatedAt { get; set; }
-
-        //[JsonProperty("default_profile_image")]
-        //public bool DefaultProfileImage { get; set; }
-
-        //[JsonProperty("description")]
-        //public string Description { get; set; }
-
-        //[JsonProperty("fast_followers_count")]
-        //public long FastFollowersCount { get; set; }
-
-        //[JsonProperty("favourites_count")]
-        //public long FavouritesCount { get; set; }
-
-        //[JsonProperty("followers_count")]
-        //public long FollowersCount { get; set; }
-
-        //[JsonProperty("friends_count")]
-        //public long FriendsCount { get; set; }
-
-        //[JsonProperty("has_custom_timelines")]
-        //public bool HasCustomTimelines { get; set; }
-
-        //[JsonProperty("is_translator")]
-        //public bool IsTranslator { get; set; }
-
-        //[JsonProperty("listed_count")]
-        //public long ListedCount { get; set; }
-
-        //[JsonProperty("location")]
-        //public string Location { get; set; }
-
-        //[JsonProperty("media_count")]
-        //public long MediaCount { get; set; }
+  
         [Key]
         [JsonProperty("name")]
         public string Name { get; set; }
 
-        //[JsonProperty("normal_followers_count")]
-        //public long NormalFollowersCount { get; set; }
-
-        //[JsonProperty("possibly_sensitive")]
-        //public bool PossiblySensitive { get; set; }
-
-        //[JsonProperty("profile_banner_url")]
-        //public Uri ProfileBannerUrl { get; set; }
-
-        //[JsonProperty("profile_image_url_https")]
-        //public Uri ProfileImageUrlHttps { get; set; }
-
-        //[JsonProperty("screen_name")]
-        //public string ScreenName { get; set; }
-
-        //[JsonProperty("statuses_count")]
-        //public long StatusesCount { get; set; }
-
-        //[JsonProperty("translator_type")]
-        //public TranslatorType TranslatorType { get; set; }
-
-        //[JsonProperty("url")]
-        //public Uri Url { get; set; }
-
-        //[JsonProperty("verified")]
-        //public bool Verified { get; set; }
-
-        //[JsonProperty("verified_type", NullValueHandling = NullValueHandling.Ignore)]
-        //public string VerifiedType { get; set; }
-
-        //[JsonProperty("withheld_in_countries")]
-        //public object[] WithheldInCountries { get; set; }
-
-        //[JsonProperty("id_str")]
-        //[JsonConverter(typeof(ParseStringConverter))]
-        //public long IdStr { get; set; }
     }
-
-    //public partial class UserMention
-    //{
-    //    [JsonProperty("id_str")]
-    //    public string IdStr { get; set; }
-
-    //    [JsonProperty("name")]
-    //    public string Name { get; set; }
-
-    //    [JsonProperty("screen_name")]
-    //    public string ScreenName { get; set; }
-
-    //    [JsonProperty("profile")]
-    //    public Uri Profile { get; set; }
-    //}
 
     public enum TypeEnum { Photo, Video };
 
